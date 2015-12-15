@@ -1,9 +1,7 @@
 package com.jacobheric.youbrew.service;
 
 import com.jacobheric.AbstractContextBaseTest;
-import com.jacobheric.youbrew.dao.criteria.RecipeCriteria;
-import com.jacobheric.youbrew.domain.Recipe;
-import com.jacobheric.youbrew.service.contract.IRecipeService;
+import com.jacobheric.youbrew.dao.criteria.ExpenseCriteria;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,17 +27,15 @@ import static org.junit.Assert.assertTrue;
  *
  *   see <http://www.gnu.org/licenses/>.
  */
-public class RecipeServiceTest extends AbstractContextBaseTest {
-	private Logger log = LoggerFactory.getLogger(RecipeServiceTest.class);
+public class ExpenseServiceTest extends AbstractContextBaseTest {
+	private Logger log = LoggerFactory.getLogger(ExpenseServiceTest.class);
 
+	/*
 	@Autowired
 	private IRecipeService recipeService;
 
 
-	/**
-	 * Pull some vfc items
-	 * @throws Exception
-	 */
+
 	@Test
 	public void testFindRecipByName() throws Exception{
 		RecipeCriteria rc = new RecipeCriteria();
@@ -51,5 +47,6 @@ public class RecipeServiceTest extends AbstractContextBaseTest {
 		for (Recipe recipe : recipes)
 			System.out.println(recipe.getName());
 	}
+	*/
 
 }

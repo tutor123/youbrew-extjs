@@ -1,7 +1,10 @@
+package com.jacobheric.youbrew.dao.criteria;
+
 /**
- * Description:  Recipe DAO interface, defines recipe dao.
- * 
- * @author: jacob heric
+ * Description: encapsulates search/query params (terms, page size, etc.)
+ *
+ * @author:  jacob heric
+ * @created: Mar 9, 2011
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -14,16 +17,17 @@
  *   GNU General Public License for more details.
  *
  *   see <http://www.gnu.org/licenses/>.
+ *
  */
-package com.jacobheric.youbrew.dao.contract;
+public class ExpenseCriteria extends BaseCriteria {
 
-import com.jacobheric.youbrew.dao.criteria.RecipeCriteria;
-import com.jacobheric.youbrew.domain.Recipe;
+	String query;
 
-import java.util.List;
+	public String getQuery() {
+		return query;
+	}
 
-public interface IRecipeDAO extends IBaseDAO<Recipe, Long> {
-
-   public List<Recipe> search(RecipeCriteria criteria);
-
+	public void setQuery(String query) {
+		this.query = query;
+	}
 }

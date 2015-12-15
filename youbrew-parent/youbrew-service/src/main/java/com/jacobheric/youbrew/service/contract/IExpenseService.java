@@ -1,5 +1,5 @@
 /*
- * Description: Recipe service interface contract. 
+ * Description: Hop service interface contract. 
  * 
  * @author: jacob
  * @created: 1/27/2010
@@ -15,35 +15,33 @@
  *   GNU General Public License for more details.
  *
  *   see <http://www.gnu.org/licenses/>.
- *
  */
 package com.jacobheric.youbrew.service.contract;
 
-import com.jacobheric.youbrew.dao.criteria.RecipeCriteria;
-import com.jacobheric.youbrew.domain.Recipe;
-
 import java.util.List;
 
-public interface IRecipeService {
+import com.jacobheric.youbrew.dao.criteria.ExpenseCriteria;
+import com.jacobheric.youbrew.domain.Expense;
 
-	public Recipe insert(Recipe recipe);
+@SuppressWarnings("unused")
+public interface IExpenseService {
+	public Expense insert(Expense expense);
 
-	public Recipe update(Recipe recipe);
+	public Expense update(Expense expense);
 
-	public void delete(Recipe recipe);
+	public void delete(Expense expense);
 
 	public void deleteById(Long id);
 
-	public Recipe findById(Long id);
+	public Expense findById(Long id);
 
-	public List<Recipe> findByExample(Recipe exampleClass, String[] excludeProperty);
+	public List<Expense> findByExample(Expense exampleClass, String[] excludeProperty);
 
-	public List<Recipe> findAll();
+	public List<Expense> findAll();
 
 	/**
 	 * @param criteria - the recipe criteria object
 	 * @return - list of found recipes
 	 */
-	public List<Recipe> search(RecipeCriteria criteria);
-	
+	public List<Expense> search(ExpenseCriteria criteria);
 }

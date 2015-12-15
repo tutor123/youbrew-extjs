@@ -1,8 +1,7 @@
-/*
- * Description: Yeast service interface, adds specificity to base service. 
+/**
+ * Description:  Hop DAO interface, defines hop dao.
  * 
  * @author: jacob heric
- * @created: 1/27/2010
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -16,28 +15,14 @@
  *
  *   see <http://www.gnu.org/licenses/>.
  */
-package com.jacobheric.youbrew.service.contract;
-
-import com.jacobheric.youbrew.domain.Yeast;
+package com.jacobheric.youbrew.dao.contract;
 
 import java.util.List;
 
-public interface IYeastService {
+import com.jacobheric.youbrew.dao.criteria.ExpenseCriteria;
+import com.jacobheric.youbrew.domain.Expense;
 
-	public Yeast insert(Yeast yeast);
+public interface IExpenseDAO extends IBaseDAO<Expense, Long> {
+	public List<Expense> search(ExpenseCriteria criteria);
 
-	public Yeast update(Yeast y);
-
-	public void delete(Yeast y);
-
-	public void deleteById(Long id);
-
-	public Yeast findById(Long id);
-
-	public List<Yeast> findByName(String name);	
-
-	public List<Yeast> findByExample(Yeast exampleClass, String[] excludeProperty);
-
-	public List<Yeast> findAll();
-	
 }

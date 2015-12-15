@@ -1,8 +1,13 @@
-/*
- * Description: Malt service interface contract. 
- * 
- * @author: jacob heric
- * @created: 1/27/2010
+package com.jacobheric.youbrew.view;
+
+import com.jacobheric.youbrew.domain.Expense;
+
+import java.util.List;
+
+/**
+ * A thin, dumb wrapper to help jackson deserialize standard icoming extjs store json (which features a root element of "items")
+ * @user: jacob
+ * @created: 2/18/2011
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -15,17 +20,18 @@
  *   GNU General Public License for more details.
  *
  *   see <http://www.gnu.org/licenses/>.
- * 
  */
-package com.jacobheric.youbrew.service.contract;
+public class ExpenseListInput {
+	List<Expense> items;
 
-import com.jacobheric.youbrew.domain.Malt;
+	public ExpenseListInput() {
+	}
 
+	public List<Expense> getItems() {
+		return items;
+	}
 
-/**
- * @author Jacob
- *
- */
-public interface IMaltService {
-	
+	public void setItems(List<Expense> items) {
+		this.items = items;
+	}
 }
