@@ -30,23 +30,8 @@ import static org.junit.Assert.assertTrue;
 public class ExpenseServiceTest extends AbstractContextBaseTest {
 	private Logger log = LoggerFactory.getLogger(ExpenseServiceTest.class);
 
-	/*
-	@Autowired
-	private IRecipeService recipeService;
-
-
-
 	@Test
 	public void testFindRecipByName() throws Exception{
-		RecipeCriteria rc = new RecipeCriteria();
-		rc.setQuery("ale");
-		List<Recipe> recipes = this.recipeService.search(rc);
-
-		assertTrue("No recipes found", recipes.size() > 0);
-
-		for (Recipe recipe : recipes)
-			System.out.println(recipe.getName());
 	}
-	*/
 
 }

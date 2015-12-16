@@ -55,7 +55,7 @@ public abstract class BaseDAOImpl<T, ID extends Serializable> implements IBaseDA
 	}
 
 	/**
-	 * §
+	 *
 	 *
 	 * @return - hibernate sessionfactory
 	 */
